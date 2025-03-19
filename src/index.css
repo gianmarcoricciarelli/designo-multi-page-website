@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url(./assets/fonts/Jost.ttf) format('truetype');
+}
+
+:root {
+    --peach: #e7816b;
+    --light-peach: #ffad9b;
+    --black: #1d1c1e;
+    --dark-grey: #333136;
+    --white: #ffffff;
+    --light-grey: #f1f3f5;
+
+    font-family: 'Jost';
+
+    --text-h1: 48px;
+    --text-h2: 40px;
+    --text-h3: 20px;
+    --text-body: 16px;
+}
