@@ -75,4 +75,7 @@ h6 {
     --text-h2: 40px;
     --text-h3: 20px;
     --text-body: 16px;
+
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
 }

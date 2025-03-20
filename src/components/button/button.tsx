@@ -1,5 +1,6 @@
 import { MouseEventHandler, ReactNode } from 'react'
 import styles from './button.module.scss'
+import clsx from 'clsx'
 
 interface ButtonProps {
     background?: 'light' | 'dark'
@@ -14,11 +15,10 @@ export default function Button({
 }: ButtonProps) {
     return (
         <button
-            style={{
-                backgroundColor:
-                    background === 'light' ? 'var(--white)' : 'var(--peach)'
-            }}
-            className={styles['button']}
+            className={clsx(styles['button'], {
+                [styles['button--light']]: background === 'light',
+                [styles['button--dark']]: background === 'dark'
+            })}
             onClick={onClick}
         >
             {children}

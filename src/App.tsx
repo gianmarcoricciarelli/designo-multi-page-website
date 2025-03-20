@@ -3,8 +3,8 @@ import Text from './components/text/text'
 
 function App() {
     return (
-        <Button>
-            <Text color='light-peach' type='body'>
+        <Button background='dark'>
+            <Text color='black' type='body'>
                 some text
             </Text>
         </Button>

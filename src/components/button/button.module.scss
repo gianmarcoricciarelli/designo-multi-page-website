@@ -8,4 +8,24 @@
     white-space: nowrap;
     border-radius: 12px;
     text-align: center;
+
+    cursor: pointer;
+
+    transition: all 300ms;
+
+    &--light {
+        background-color: var(--white);
+    }
+
+    &--dark {
+        background-color: var(--peach);
+    }
+
+    &:hover {
+        background-color: var(--light-peach);
+
+        & > * {
+            color: var(--white) !important;
+        }
+    }
 }
