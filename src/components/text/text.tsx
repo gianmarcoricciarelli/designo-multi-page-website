@@ -1,18 +1,12 @@
 import { ReactNode } from 'react'
 import { Color } from '../types'
 import styles from './text.module.scss'
+import clsx from 'clsx'
 
 interface TextProps {
     type: 'h1' | 'h2' | 'h3' | 'body'
     color: Color
     children: ReactNode
-}
-
-enum FontSize {
-    h1 = '48px',
-    h2 = '40px',
-    h3 = '20px',
-    body = '16px'
 }
 
 export default function Text({ color, type, children }: TextProps) {
@@ -21,10 +15,9 @@ export default function Text({ color, type, children }: TextProps) {
             return (
                 <h1
                     style={{
-                        color: `var(--${color})`,
-                        fontSize: FontSize[type]
+                        color: `var(--${color})`
                     }}
-                    className={styles['text__h1']}
+                    className={clsx(styles['text'], styles['text__h1'])}
                 >
                     {children}
                 </h1>
@@ -33,10 +26,9 @@ export default function Text({ color, type, children }: TextProps) {
             return (
                 <h2
                     style={{
-                        color: `var(--${color})`,
-                        fontSize: FontSize[type]
+                        color: `var(--${color})`
                     }}
-                    className={styles['text__h2']}
+                    className={clsx(styles['text'], styles['text__h2'])}
                 >
                     {children}
                 </h2>
@@ -45,10 +37,9 @@ export default function Text({ color, type, children }: TextProps) {
             return (
                 <h3
                     style={{
-                        color: `var(--${color})`,
-                        fontSize: FontSize[type]
+                        color: `var(--${color})`
                     }}
-                    className={styles['text__h3']}
+                    className={clsx(styles['text'], styles['text__h3'])}
                 >
                     {children}
                 </h3>
@@ -57,10 +48,9 @@ export default function Text({ color, type, children }: TextProps) {
             return (
                 <p
                     style={{
-                        color: `var(--${color})`,
-                        fontSize: FontSize[type]
+                        color: `var(--${color})`
                     }}
-                    className={styles['text__body']}
+                    className={clsx(styles['text'], styles['text__body'])}
                 >
                     {children}
                 </p>
