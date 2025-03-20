@@ -1,14 +1,10 @@
-import Button from './components/button/button'
-import Text from './components/text/text'
+import styles from './App.module.scss'
+import NavBar from './widgets/navbar/navbar'
 
-function App() {
+export default function App() {
     return (
-        <Button background='dark'>
-            <Text color='black' type='body'>
-                some text
-            </Text>
-        </Button>
+        <div className={styles['app']}>
+            <NavBar />
+        </div>
     )
 }
-
-export default App

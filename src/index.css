@@ -9,6 +9,7 @@
 }
 
 body {
+    height: 100%;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 }
@@ -78,4 +79,12 @@ h6 {
 
     --font-weight-medium: 500;
     --font-weight-regular: 400;
+}
+
+html {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
 }

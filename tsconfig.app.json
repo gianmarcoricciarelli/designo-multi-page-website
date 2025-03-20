@@ -20,7 +20,14 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "noUncheckedSideEffectImports": true,
+
+        /* Paths */
+        "paths": {
+            "@components/*": ["./src/components/*"],
+            "@shared-assets/*": ["./src/assets/shared/*"],
+            "@widgets/*": ["./src/widgets/*"]
+        }
     },
     "include": ["src"]
 }
