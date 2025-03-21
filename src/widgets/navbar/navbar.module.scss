@@ -1,11 +1,34 @@
 .navbar {
     padding: 24px 32px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    position: relative;
+
     img {
         width: 200px;
         height: 28px;
+    }
+
+    &__menu {
+        width: 100%;
+        height: calc(100dvh - 76px);
+        background-color: rgb(00 00 00/ 0.25);
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+
+        &__options {
+            padding: 24px 48px;
+            background-color: var(--black);
+
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
     }
 }

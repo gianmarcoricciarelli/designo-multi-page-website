@@ -1,15 +1,16 @@
+import clsx from 'clsx'
 import { ReactNode } from 'react'
 import { Color } from '../types'
 import styles from './text.module.scss'
-import clsx from 'clsx'
 
 interface TextProps {
     type: 'h1' | 'h2' | 'h3' | 'body'
     color: Color
+    className?: string
     children: ReactNode
 }
 
-export default function Text({ color, type, children }: TextProps) {
+export default function Text({ color, type, className, children }: TextProps) {
     switch (type) {
         case 'h1':
             return (
@@ -17,7 +18,11 @@ export default function Text({ color, type, children }: TextProps) {
                     style={{
                         color: `var(--${color})`
                     }}
-                    className={clsx(styles['text'], styles['text__h1'])}
+                    className={clsx(
+                        className,
+                        styles['text'],
+                        styles['text__h1']
+                    )}
                 >
                     {children}
                 </h1>
@@ -28,7 +33,11 @@ export default function Text({ color, type, children }: TextProps) {
                     style={{
                         color: `var(--${color})`
                     }}
-                    className={clsx(styles['text'], styles['text__h2'])}
+                    className={clsx(
+                        className,
+                        styles['text'],
+                        styles['text__h2']
+                    )}
                 >
                     {children}
                 </h2>
@@ -39,7 +48,11 @@ export default function Text({ color, type, children }: TextProps) {
                     style={{
                         color: `var(--${color})`
                     }}
-                    className={clsx(styles['text'], styles['text__h3'])}
+                    className={clsx(
+                        className,
+                        styles['text'],
+                        styles['text__h3']
+                    )}
                 >
                     {children}
                 </h3>
@@ -50,7 +63,11 @@ export default function Text({ color, type, children }: TextProps) {
                     style={{
                         color: `var(--${color})`
                     }}
-                    className={clsx(styles['text'], styles['text__body'])}
+                    className={clsx(
+                        className,
+                        styles['text'],
+                        styles['text__body']
+                    )}
                 >
                     {children}
                 </p>
