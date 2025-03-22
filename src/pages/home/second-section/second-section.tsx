@@ -5,10 +5,10 @@ import webDesignImagePath from '@home-assets/mobile/image-web-design.jpg'
 import RightArrowIcon from '@shared-assets/desktop/icon-right-arrow.svg?react'
 import styles from './second-section.module.scss'
 
+type CardType = 'webDesign' | 'appDesign' | 'graphicDesign'
+
 export default function SecondSection() {
-    const onCardClickHandler = (
-        clickedCard: 'webDesign' | 'appDesign' | 'graphicDesign'
-    ) => {
+    const onCardClickHandler = (clickedCard: CardType) => {
         switch (clickedCard) {
             case 'webDesign': {
                 console.log(clickedCard)
