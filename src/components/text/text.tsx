@@ -1,11 +1,12 @@
 import clsx from 'clsx'
-import { ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 import { Color } from '../types'
 import styles from './text.module.scss'
 
 interface TextProps {
     type?: 'h1' | 'h2' | 'h3' | 'body'
     color?: Color
+    style?: CSSProperties
     className?: string
     children: ReactNode
 }
@@ -13,6 +14,7 @@ interface TextProps {
 export default function Text({
     color = 'white',
     type,
+    style,
     className,
     children
 }: TextProps) {
@@ -21,6 +23,7 @@ export default function Text({
             return (
                 <h1
                     style={{
+                        ...style,
                         color: `var(--${color})`
                     }}
                     className={clsx(
@@ -36,6 +39,7 @@ export default function Text({
             return (
                 <h2
                     style={{
+                        ...style,
                         color: `var(--${color})`
                     }}
                     className={clsx(
@@ -51,6 +55,7 @@ export default function Text({
             return (
                 <h3
                     style={{
+                        ...style,
                         color: `var(--${color})`
                     }}
                     className={clsx(
@@ -66,6 +71,7 @@ export default function Text({
             return (
                 <p
                     style={{
+                        ...style,
                         color: `var(--${color})`
                     }}
                     className={clsx(
@@ -81,6 +87,7 @@ export default function Text({
             return (
                 <span
                     style={{
+                        ...style,
                         color: `var(--${color})`
                     }}
                     className={clsx(className, styles['text'])}
