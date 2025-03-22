@@ -4,7 +4,7 @@ import { Color } from '../types'
 import styles from './text.module.scss'
 
 interface TextProps {
-    element?: 'h1' | 'h2' | 'h3' | 'body'
+    element?: 'h1' | 'h2' | 'h3' | 'p' | 'span'
     fontSize?: 'regular' | 'medium' | 'large' | 'xlarge' | number
     fontWeight?: 'medium' | 'regular'
     lineHeight?: 'big' | 'small' | number
@@ -15,7 +15,7 @@ interface TextProps {
 }
 
 export default function Text({
-    element,
+    element = 'span',
     fontSize,
     fontWeight = 'regular',
     lineHeight = 'small',
@@ -24,17 +24,7 @@ export default function Text({
     className,
     children
 }: TextProps) {
-    let component: string = ''
-
-    if (element === 'body') {
-        component = 'p'
-    } else if (!element) {
-        component = 'span'
-    } else {
-        component = element
-    }
-
-    return createElement(component, {
+    return createElement(element, {
         style: {
             ...style,
             color: `var(--${color})`,
@@ -46,7 +36,6 @@ export default function Text({
         className: clsx(className, styles['text'], {
             [styles['h2']]: element === 'h2',
             [styles['h3']]: element === 'h3',
-            [styles['font-rg']]: fontSize === 'regular',
             [styles['font-md']]: fontSize === 'medium',
             [styles['font-lg']]: fontSize === 'large',
             [styles['font-xlg']]: fontSize === 'xlarge',
