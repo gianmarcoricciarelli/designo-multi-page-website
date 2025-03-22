@@ -8,6 +8,8 @@
     bottom: 0;
     transform: translateY(100%);
 
+    z-index: 3;
+
     &__options {
         padding: 24px 48px;
         background-color: var(--black);
