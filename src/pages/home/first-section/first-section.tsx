@@ -13,16 +13,16 @@ export default function FirstSection() {
     return (
         <div className={styles['first-section']}>
             <div className={styles['first-section__text-box']}>
-                <Text className={styles['first-section__text-box__claim']}>
+                <Text fontSize={32} fontWeight='medium' lineHeight={36}>
                     Award-winning custom designs and digital branding solutions
                 </Text>
-                <Text type='body'>
+                <Text>
                     With over 10 years in the industry, we are experienced in
                     creating fully responsive websites, app design, and engaging
                     brand experiences. Find out more about our services.
                 </Text>
                 <Button background='light' onClick={onButtonClick}>
-                    <Text type='body' color='black'>
+                    <Text fontWeight='medium' color='dark-grey'>
                         LEARN MORE
                     </Text>
                 </Button>
