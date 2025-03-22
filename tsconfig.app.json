@@ -25,6 +25,7 @@
         /* Paths */
         "paths": {
             "@components/*": ["./src/components/*"],
+            "@home-assets/*": ["./src/assets/home/*"],
             "@shared-assets/*": ["./src/assets/shared/*"],
             "@widgets/*": ["./src/widgets/*"]
         }

@@ -4,13 +4,18 @@ import { Color } from '../types'
 import styles from './text.module.scss'
 
 interface TextProps {
-    type: 'h1' | 'h2' | 'h3' | 'body'
-    color: Color
+    type?: 'h1' | 'h2' | 'h3' | 'body'
+    color?: Color
     className?: string
     children: ReactNode
 }
 
-export default function Text({ color, type, className, children }: TextProps) {
+export default function Text({
+    color = 'white',
+    type,
+    className,
+    children
+}: TextProps) {
     switch (type) {
         case 'h1':
             return (
@@ -57,7 +62,7 @@ export default function Text({ color, type, className, children }: TextProps) {
                     {children}
                 </h3>
             )
-        default:
+        case 'body':
             return (
                 <p
                     style={{
@@ -71,6 +76,17 @@ export default function Text({ color, type, className, children }: TextProps) {
                 >
                     {children}
                 </p>
+            )
+        default:
+            return (
+                <span
+                    style={{
+                        color: `var(--${color})`
+                    }}
+                    className={clsx(className, styles['text'])}
+                >
+                    {children}
+                </span>
             )
     }
 }

@@ -1,6 +1,6 @@
+import clsx from 'clsx'
 import { MouseEventHandler, ReactNode } from 'react'
 import styles from './button.module.scss'
-import clsx from 'clsx'
 
 interface ButtonProps {
     background?: 'light' | 'dark'
