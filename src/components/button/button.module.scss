@@ -2,9 +2,6 @@
     border: unset;
     padding: unset;
 
-    width: 152px;
-    height: 56px;
-
     white-space: nowrap;
     border-radius: 12px;
     text-align: center;
@@ -13,14 +10,6 @@
 
     transition: all 300ms;
 
-    &--light {
-        background-color: var(--white);
-    }
-
-    &--dark {
-        background-color: var(--peach);
-    }
-
     &:hover {
         background-color: var(--light-peach);
 
@@ -28,4 +17,12 @@
             color: var(--white) !important;
         }
     }
+}
+
+.button--light {
+    background-color: var(--white);
+}
+
+.button--dark {
+    background-color: var(--peach);
 }
