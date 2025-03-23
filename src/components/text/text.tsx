@@ -8,6 +8,7 @@ interface TextProps {
     fontSize?: 'regular' | 'medium' | 'large' | 'xlarge' | number
     fontWeight?: 'medium' | 'regular'
     lineHeight?: 'big' | 'small' | number
+    letterSpacing?: string | number
     color?: Color
     style?: CSSProperties
     className?: string
@@ -19,6 +20,7 @@ export default function Text({
     fontSize,
     fontWeight = 'regular',
     lineHeight = 'small',
+    letterSpacing,
     color = 'white',
     style,
     className,
@@ -31,11 +33,15 @@ export default function Text({
             fontSize:
                 typeof fontSize === 'number' ? `${fontSize}px` : undefined,
             lineHeight:
-                typeof lineHeight === 'number' ? `${lineHeight}px` : undefined
+                typeof lineHeight === 'number' ? `${lineHeight}px` : undefined,
+            letterSpacing:
+                typeof letterSpacing === 'string'
+                    ? letterSpacing
+                    : typeof letterSpacing === 'number'
+                      ? `+${letterSpacing}px`
+                      : undefined
         },
         className: clsx(className, styles['text'], {
-            [styles['h2']]: element === 'h2',
-            [styles['h3']]: element === 'h3',
             [styles['font-md']]: fontSize === 'medium',
             [styles['font-lg']]: fontSize === 'large',
             [styles['font-xlg']]: fontSize === 'xlarge',
