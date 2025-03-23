@@ -32,7 +32,7 @@ export default function SecondSection() {
                 onClick={() => onCardClickHandler('webDesign')}
             >
                 <div className={styles['second-section__card__text-box']}>
-                    <Text style={{ fontSize: '28px', lineHeight: '36px' }}>
+                    <Text fontSize={28} fontWeight='medium' lineHeight={36}>
                         WEB DESIGN
                     </Text>
                     <div
@@ -42,7 +42,7 @@ export default function SecondSection() {
                             ]
                         }
                     >
-                        <Text style={{ fontWeight: 500 }} type='body'>
+                        <Text fontWeight='medium' letterSpacing={5}>
                             VIEW PROJECTS
                         </Text>
                         <RightArrowIcon />
@@ -56,7 +56,7 @@ export default function SecondSection() {
                 onClick={() => onCardClickHandler('appDesign')}
             >
                 <div className={styles['second-section__card__text-box']}>
-                    <Text style={{ fontSize: '28px', lineHeight: '36px' }}>
+                    <Text fontSize={28} lineHeight={36}>
                         APP DESIGN
                     </Text>
                     <div
@@ -66,7 +66,7 @@ export default function SecondSection() {
                             ]
                         }
                     >
-                        <Text style={{ fontWeight: 500 }} type='body'>
+                        <Text fontWeight='medium' letterSpacing={5}>
                             VIEW PROJECTS
                         </Text>
                         <RightArrowIcon />
@@ -79,7 +79,7 @@ export default function SecondSection() {
                 onClick={() => onCardClickHandler('graphicDesign')}
             >
                 <div className={styles['second-section__card__text-box']}>
-                    <Text style={{ fontSize: '28px', lineHeight: '36px' }}>
+                    <Text fontSize={28} lineHeight={36}>
                         GRAPHIC DESIGN
                     </Text>
                     <div
@@ -89,7 +89,7 @@ export default function SecondSection() {
                             ]
                         }
                     >
-                        <Text style={{ fontWeight: 500 }} type='body'>
+                        <Text fontWeight='medium' letterSpacing={5}>
                             VIEW PROJECTS
                         </Text>
                         <RightArrowIcon />

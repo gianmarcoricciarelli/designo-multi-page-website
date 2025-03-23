@@ -16,13 +16,17 @@ export default function FirstSection() {
                 <Text fontSize={32} fontWeight='medium' lineHeight={36}>
                     Award-winning custom designs and digital branding solutions
                 </Text>
-                <Text>
+                <Text lineHeight={25}>
                     With over 10 years in the industry, we are experienced in
                     creating fully responsive websites, app design, and engaging
                     brand experiences. Find out more about our services.
                 </Text>
                 <Button background='light' onClick={onButtonClick}>
-                    <Text fontWeight='medium' color='dark-grey'>
+                    <Text
+                        fontWeight='medium'
+                        letterSpacing={1}
+                        color='dark-grey'
+                    >
                         LEARN MORE
                     </Text>
                 </Button>

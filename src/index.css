@@ -72,10 +72,10 @@ h6 {
 
     font-family: 'Jost';
 
-    --text-h1: 48px;
-    --text-h2: 40px;
-    --text-h3: 20px;
-    --text-body: 16px;
+    --text-xlarge: 48px;
+    --text-large: 40px;
+    --text-medium: 20px;
+    --text-regular: 16px;
 
     --font-weight-medium: 500;
     --font-weight-regular: 400;

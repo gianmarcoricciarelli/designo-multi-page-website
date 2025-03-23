@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from 'motion/react'
 import styles from './menu.module.scss'
 
 export default function Menu({ isVisible }: { isVisible: boolean }) {
+    const menuItems = ['OUR COMPANY', 'LOCATIONS', 'CONTACT']
+
     return (
         <AnimatePresence>
             {isVisible && (
@@ -13,15 +15,16 @@ export default function Menu({ isVisible }: { isVisible: boolean }) {
                     exit={{ opacity: 0, transition: { duration: 0.3 } }}
                 >
                     <div className={styles['menu__options']}>
-                        <Text type='h3' color='white'>
-                            OUR COMPANY
-                        </Text>
-                        <Text type='h3' color='white'>
-                            LOCATIONS
-                        </Text>
-                        <Text type='h3' color='white'>
-                            CONTACT
-                        </Text>
+                        {menuItems.map((i) => (
+                            <Text
+                                key={i}
+                                fontSize={24}
+                                letterSpacing={2}
+                                color='white'
+                            >
+                                {i}
+                            </Text>
+                        ))}
                     </div>
                 </motion.div>
             )}
