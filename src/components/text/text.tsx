@@ -26,9 +26,9 @@ export default function Text({
     className,
     children
 }: TextProps) {
+    console.log(style)
     return createElement(element, {
         style: {
-            ...style,
             color: `var(--${color})`,
             fontSize:
                 typeof fontSize === 'number' ? `${fontSize}px` : undefined,
@@ -39,7 +39,8 @@ export default function Text({
                     ? letterSpacing
                     : typeof letterSpacing === 'number'
                       ? `+${letterSpacing}px`
-                      : undefined
+                      : undefined,
+            ...style
         },
         className: clsx(className, styles['text'], {
             [styles['font-md']]: fontSize === 'medium',

@@ -1,3 +1,4 @@
+import Footer from '@widgets/footer/footer'
 import { Outlet } from 'react-router'
 import styles from './App.module.scss'
 import NavBar from './widgets/navbar/navbar'
@@ -7,6 +8,7 @@ export default function App() {
         <div className={styles['app']}>
             <NavBar />
             <Outlet />
+            <Footer />
         </div>
     )
 }
