@@ -1,9 +1,11 @@
 .footer {
-    padding: 80px 24px;
+    padding: 254px 24px 64px 24px;
     background-color: var(--black);
 
     display: flex;
     flex-direction: column;
+
+    position: relative;
 
     img {
         transform: scale(0.5);
@@ -40,5 +42,27 @@
             align-items: center;
             gap: 16px;
         }
+    }
+
+    &__call-to-action {
+        width: 328px;
+        padding: 64px 24px;
+
+        background-color: var(--peach);
+        background-image: url(../../assets/shared/desktop/bg-pattern-call-to-action.svg);
+        background-position: center right;
+        border-radius: 15px;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 }

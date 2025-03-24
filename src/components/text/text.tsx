@@ -26,7 +26,6 @@ export default function Text({
     className,
     children
 }: TextProps) {
-    console.log(style)
     return createElement(element, {
         style: {
             color: `var(--${color})`,
